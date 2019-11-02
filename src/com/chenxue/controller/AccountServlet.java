@@ -29,6 +29,7 @@ public class AccountServlet extends HttpServlet {
 		boolean flag=true;
 		Account_tblService service = new Account_tblServiceImpl();
 		flag=service.trasfer(Integer.valueOf(aIdFrom), Integer.valueOf(aIdTo), Integer.valueOf(money));
+		response.setCharacterEncoding("utf-8");
 		PrintWriter out =response.getWriter();
 		String s="";
 		if (flag) {
@@ -36,8 +37,9 @@ public class AccountServlet extends HttpServlet {
 		}else {
 			s="转账失败";
 		}
+		
 		out.write(s);
-		request.getRequestDispatcher("index.jsp").forward(request,response);
+		//request.getRequestDispatcher("/index.jsp").forward(request,response);
 	}
 
 	/**
