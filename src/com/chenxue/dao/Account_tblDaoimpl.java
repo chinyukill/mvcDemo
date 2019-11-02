@@ -4,7 +4,7 @@ public class Account_tblDaoimpl implements Account_tblDao {
 
 	@Override
 	public int checkAccount(int Aid) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
